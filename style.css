@@ -1,0 +1,94 @@
+:root {
+    --primary: #c9a44c;
+    --bg-dark: #0f0f0f;
+    --bg-card: #1a1a1a;
+    --text: #e0e0e0;
+    --danger: #ff4d4d;
+    --success: #4CAF50;
+    --accent: #a0f;
+}
+
+body {
+    background: var(--bg-dark);
+    color: var(--text);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0; padding: 20px;
+}
+
+.container { max-width: 1000px; margin: auto; }
+
+.section { background: var(--bg-card); padding: 25px; border-radius: 12px; border: 1px solid #333; margin-bottom: 20px; }
+.hidden { display: none !important; }
+
+/* Avatar */
+.avatar-container { width: 130px; height: 130px; margin: 0 auto; border-radius: 50%; border: 3px solid var(--primary); overflow: hidden; background: #222; }
+#img-avatar { width: 100%; height: 100%; object-fit: cover; }
+
+/* Estadísticas en Círculos (Nueva) */
+.stats-principales-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.stat-circle {
+    width: 110px;
+    height: 110px;
+    background: #222;
+    border: 3px solid #444;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.stat-circle.highlight { border-color: var(--primary); background: #2a251a; }
+.stat-circle small { font-size: 0.6em; font-weight: bold; color: #888; text-transform: uppercase; margin-bottom: 2px; }
+.stat-circle .val { font-size: 2em; font-weight: bold; color: white; line-height: 1; }
+
+input, select, button { background: #252525; color: white; border: 1px solid #444; padding: 10px; border-radius: 6px; }
+.btn-primary { background: var(--primary); color: black; font-weight: bold; width: 100%; cursor: pointer; margin-top: 15px; }
+
+/* Grid */
+.grid-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 15px; }
+.stat-box { background: #222; padding: 15px; text-align: center; border-radius: 8px; border: 1px solid #333; }
+.final-mod { font-size: 1.8em; color: var(--success); font-weight: bold; }
+
+/* Dashboard */
+#seccion-tablero { display: grid; grid-template-columns: 280px 1fr; gap: 20px; }
+.sidebar { background: var(--bg-card); padding: 20px; border-radius: 12px; text-align: center; border: 1px solid #333; }
+.main-content { background: var(--bg-card); padding: 25px; border-radius: 12px; border: 1px solid #333; }
+
+/* Barras */
+.hp-bar-container { background: #333; height: 18px; border-radius: 9px; overflow: hidden; margin: 10px 0; }
+.progress-bar { height: 100%; transition: width 0.4s ease; }
+#barra-vida { background: var(--success); }
+#barra-exp { background: var(--accent); }
+
+/* Oro */
+.oro-card { background: #222; padding: 15px; border-radius: 10px; text-align: center; margin-bottom: 20px; border: 1px solid var(--primary); }
+.oro-display { font-size: 2em; color: var(--primary); font-weight: bold; }
+.oro-controls { display: flex; gap: 5px; justify-content: center; margin-top: 10px; }
+
+/* Magia */
+.spell-slots-header { background: #333; padding: 10px; border-radius: 6px; margin-bottom: 15px; text-align: center; border: 1px solid var(--accent); }
+.lvl-tag { background: #444; padding: 2px 6px; border-radius: 4px; font-size: 0.7em; }
+.spell-item { background: #252525; padding: 12px; border-left: 4px solid var(--accent); margin-bottom: 10px; border-radius: 4px; }
+.spell-learn-card { display: flex; justify-content: space-between; background: #222; padding: 10px; margin-bottom: 8px; border-radius: 6px; align-items: center; border: 1px solid #444; }
+
+/* Skills */
+.skills-grid-final { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.skill-final-row { background: #222; padding: 8px 12px; border-radius: 6px; display: flex; justify-content: space-between; align-items: center; }
+.total-val { font-size: 1.2em; font-weight: bold; color: var(--primary); margin-left: 10px; }
+
+.tab-nav { display: flex; gap: 5px; margin-bottom: 20px; background: #222; padding: 5px; border-radius: 8px; }
+.tab-v2 { flex: 1; border: none; background: transparent; cursor: pointer; color: #888; font-size: 0.8em; padding: 10px; }
+.tab-v2.active { background: var(--primary); color: black; font-weight: bold; border-radius: 6px; }
+
+.btn-dmg { background: var(--danger); flex: 1; }
+.btn-heal { background: var(--success); flex: 1; }
+.badge { background: var(--accent); color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.7em; }
